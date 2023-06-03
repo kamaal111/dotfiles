@@ -3,6 +3,7 @@ set export
 NVM_VERSION := "v0.39.3"
 NODE_VERSION := "20.2"
 PYTHON_VERSION := "3.11.3"
+GO_VERSION := "1.20.4"
 
 copy-dotfiles:
     #!/bin/zsh
@@ -20,7 +21,7 @@ copy-dotfiles:
         cp -f $file ~/$file
     done
 
-install-tools: setup-zsh install-node install-python
+install-tools: setup-zsh install-go install-node install-python
 
 [private]
 setup-zsh:
@@ -44,12 +45,28 @@ setup-zsh:
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     fi
 
+		echo "Done setting up ZSH"
+
+[private]
+install-go:
+		#!/bin/zsh
+
+		zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) || true
+		. ~/.gvm/scripts/gvm
+
+		gvm install "go$GO_VERSION"
+		gvm use "go$GO_VERSION"
+
+		echo "Done installing Go"
+
 [private]
 install-python:
     #!/bin/zsh
 
     echo "N" | pyenv install $PYTHON_VERSION || true
     pyenv global $PYTHON_VERSION
+
+		echo "Done installing Python"
 
 [private]
 install-node:
@@ -61,3 +78,5 @@ install-node:
 
     nvm install $NODE_VERSION || exit 1
     nvm use $NODE_VERSION || exit 1
+
+		echo "Done installing Node.js"
