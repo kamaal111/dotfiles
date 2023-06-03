@@ -45,19 +45,20 @@ setup-zsh:
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     fi
 
-		echo "Done setting up ZSH"
+	echo "Done setting up ZSH"
 
 [private]
 install-go:
-		#!/bin/zsh
+    #!/bin/zsh
 
-		zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) || true
-		. ~/.gvm/scripts/gvm
+    zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) || true
 
-		gvm install "go$GO_VERSION"
-		gvm use "go$GO_VERSION"
+    . ~/.zshrc
 
-		echo "Done installing Go"
+    gvm install "go$GO_VERSION"
+    gvm use "go$GO_VERSION"
+
+    echo "Done installing Go"
 
 [private]
 install-python:
@@ -66,7 +67,7 @@ install-python:
     echo "N" | pyenv install $PYTHON_VERSION || true
     pyenv global $PYTHON_VERSION
 
-		echo "Done installing Python"
+    echo "Done installing Python"
 
 [private]
 install-node:
@@ -79,4 +80,4 @@ install-node:
     nvm install $NODE_VERSION || exit 1
     nvm use $NODE_VERSION || exit 1
 
-		echo "Done installing Node.js"
+    echo "Done installing Node.js"
