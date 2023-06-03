@@ -13,9 +13,6 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-echo "Setting Mac settings"
-just set-macos-settings
-
 echo "Copying dotfiles"
 just copy-dotfiles
 

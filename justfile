@@ -2,7 +2,6 @@ set export
 
 NVM_VERSION := "v0.39.3"
 NODE_VERSION := "20.2"
-NAME := "Kamaal"
 PYTHON_VERSION := "3.11.3"
 
 copy-dotfiles:
@@ -22,21 +21,6 @@ copy-dotfiles:
     done
 
 install-tools: setup-zsh install-node install-python
-
-set-macos-settings:
-    #!/bin/zsh
-
-    # Close any open System Preferences panes, to prevent them from overriding
-    # settings we are about to change
-    osascript -e 'tell application "System Preferences" to quit'
-
-    # Ask for the administrator password upfront
-    sudo -v
-
-    # Set computer name (as done via System Preferences → Sharing)
-    sudo scutil --set ComputerName "MacBook $NAME"
-    sudo scutil --set HostName "MacBook $NAME"
-    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook $NAME"
 
 [private]
 setup-zsh:
