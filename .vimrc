@@ -20,7 +20,7 @@ set cursorline
 set cursorcolumn
 
 " Set tab width to 4 columns.
-set tabstop=2
+set tabstop=4
 
 " Show matching words during a search.
 set showmatch
