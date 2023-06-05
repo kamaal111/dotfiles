@@ -68,7 +68,7 @@ install-go:
     . ~/.zshrc
 
     gvm install "go$GO_VERSION"
-    gvm use "go$GO_VERSION"
+    gvm use "go$GO_VERSION" --default
 
     echo "Done installing Go"
 
