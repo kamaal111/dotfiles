@@ -22,14 +22,8 @@ zsh setup.zsh
 
 ## Update dotfiles
 
-1. Go to the dotfiles directory
+From anywhere run the following
 
 ```sh
-cd ~/.dotfiles
-```
-
-2. Run setup script
-
-```sh
-just update
+update-dotfiles
 ```

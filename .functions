@@ -1,0 +1,18 @@
+update-dotfiles()
+{
+    current_directory=$(pwd)
+    . ~/.zshenv
+    cd $DOTFILES
+
+    git checkout main
+    git pull || exit 1
+
+    if test ! $(which just)
+    then
+        zsh setup.zsh
+    else
+        just update
+    fi
+
+    cd $current_directory
+}

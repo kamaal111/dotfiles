@@ -30,6 +30,8 @@ install-tools: setup-zsh setup-tmux install-go install-node install-python
 
 [private]
 brew-install-bundle:
+    #!/bin/zsh
+
     brew update
     brew tap homebrew/bundle
     brew bundle
