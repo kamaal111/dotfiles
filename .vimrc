@@ -22,6 +22,9 @@ set cursorcolumn
 " Set tab width to 4 columns.
 set tabstop=4
 
+" Use spaces instead of tabs
+set expandtab
+
 " Show matching words during a search.
 set showmatch
 

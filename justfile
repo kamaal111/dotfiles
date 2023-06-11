@@ -18,6 +18,7 @@ copy-dotfiles:
         .zshenv
         .zshrc
         .tmux.conf
+        .gitconfig
     )
 
     for file in $FILES
