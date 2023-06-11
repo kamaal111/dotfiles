@@ -27,7 +27,7 @@ copy-dotfiles:
     done
 
 [private]
-install-tools: setup-zsh setup-tmux install-go install-node install-python
+install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust
 
 [private]
 brew-install-bundle:
@@ -73,6 +73,14 @@ setup-tmux:
     fi
 
     echo "Done setting up TMUX"
+
+[private]
+install-rust:
+    #!/bin/zsh
+
+    curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+    echo "Done installing Rust"
 
 [private]
 install-go:
