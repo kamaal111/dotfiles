@@ -31,5 +31,5 @@ cd ~/.dotfiles
 2. Run setup script
 
 ```sh
-zsh setup.zsh
+just update
 ```

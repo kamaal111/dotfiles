@@ -5,6 +5,9 @@ NODE_VERSION := "20.2"
 PYTHON_VERSION := "3.11.3"
 GO_VERSION := "1.20.4"
 
+update: brew-install-bundle copy-dotfiles install-tools
+
+[private]
 copy-dotfiles:
     #!/bin/zsh
 
@@ -22,7 +25,16 @@ copy-dotfiles:
         cp -f $file ~/$file
     done
 
+[private]
 install-tools: setup-zsh setup-tmux install-go install-node install-python
+
+[private]
+brew-install-bundle:
+    brew update
+    brew tap homebrew/bundle
+    brew bundle
+
+    echo "Done installing brew bundle"
 
 [private]
 setup-zsh:

@@ -2,19 +2,16 @@
 
 echo "Setting up your Mac"
 
-if test ! $(which brew);
+if test ! $(which brew)
 then
     echo "Installing brew"
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-echo "Installing brew bundle"
-brew update
-brew tap homebrew/bundle
-brew bundle
+if test ! $(which just)
+then
+    echo "Install just"
+    brew install just
+fi
 
-echo "Copying dotfiles"
-just copy-dotfiles
-
-echo "Installing tools"
-just install-tools
+just update
