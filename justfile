@@ -3,7 +3,7 @@ set export
 NVM_VERSION := "v0.39.3"
 NODE_VERSION := "20.2"
 PYTHON_VERSION := "3.11.3"
-GO_VERSION := "1.20.4"
+GO_VERSION := "1.20.5"
 
 update: brew-install-bundle copy-dotfiles install-tools
 
@@ -46,7 +46,7 @@ setup-zsh:
     if [ ! -f $ZSH/oh-my-zsh.sh ]
     then
         echo "Installing Oh My Zsh"
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended || exit 1
     fi
 
     if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
@@ -90,8 +90,15 @@ install-go:
 
     . ~/.zshrc
 
-    gvm install "go$GO_VERSION"
-    gvm use "go$GO_VERSION" --default
+    if which go > /dev/null
+    then
+    else
+        echo "Install Go first here: https://go.dev/doc/install"
+        exit 1
+    fi
+
+    gvm install "go$GO_VERSION" || exit 1
+    gvm use "go$GO_VERSION" --default || exit 1
 
     echo "Done installing Go"
 

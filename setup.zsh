@@ -2,16 +2,20 @@
 
 echo "Setting up your Mac"
 
-if test ! $(which brew)
+if which brew > /dev/null
 then
+else
     echo "Installing brew"
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-if test ! $(which just)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if which just > /dev/null
 then
+else
     echo "Install just"
     brew install just
 fi
 
-just update
+just update || exit 1

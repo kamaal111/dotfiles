@@ -1,4 +1,5 @@
 tap "homebrew/cask"
+tap "jesseduffield/lazygit"
 
 brew 'just'
 brew 'bat'
@@ -14,3 +15,4 @@ brew 'swiftformat'
 brew 'swiftlint'
 brew 'thefuck'
 brew 'tig'
+brew 'tmux'
