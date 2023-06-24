@@ -122,4 +122,6 @@ install-node:
     nvm install $NODE_VERSION || exit 1
     nvm use $NODE_VERSION || exit 1
 
+    npm install --global yarn pnpm
+
     echo "Done installing Node.js"
