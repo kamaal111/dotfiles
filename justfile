@@ -86,8 +86,6 @@ install-rust:
 install-go:
     #!/bin/zsh
 
-    zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) || true
-
     . ~/.zshrc
 
     if which go > /dev/null
@@ -96,6 +94,8 @@ install-go:
         echo "Install Go first here: https://go.dev/doc/install"
         exit 1
     fi
+
+    zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) || true
 
     gvm install "go$GO_VERSION" || exit 1
     gvm use "go$GO_VERSION" --default || exit 1
