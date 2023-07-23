@@ -4,6 +4,7 @@ NVM_VERSION := "v0.39.3"
 NODE_VERSION := "20.2"
 PYTHON_VERSION := "3.11.3"
 GO_VERSION := "1.20.5"
+RUBY_VERSION := "3.2.2"
 
 update: brew-install-bundle copy-dotfiles install-tools
 
@@ -19,6 +20,7 @@ copy-dotfiles:
         .zshrc
         .tmux.conf
         .gitconfig
+        .gemrc
     )
 
     for file in $FILES
@@ -27,7 +29,7 @@ copy-dotfiles:
     done
 
 [private]
-install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust
+install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust install-ruby
 
 [private]
 brew-install-bundle:
@@ -73,6 +75,15 @@ setup-tmux:
     fi
 
     echo "Done setting up TMUX"
+
+[private]
+install-ruby:
+    #!/bin/zsh
+
+    echo "N" | rbenv install $RUBY_VERSION
+    rbenv global $RUBY_VERSION
+
+    echo "Done installing Ruby"
 
 [private]
 install-rust:
