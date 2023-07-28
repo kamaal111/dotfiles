@@ -1,6 +1,6 @@
 tap "homebrew/cask"
-tap "jesseduffield/lazygit"
 
+brew 'lazygit'
 brew 'just'
 brew 'bat'
 brew 'zoxide'
