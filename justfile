@@ -3,7 +3,7 @@ set export
 NVM_VERSION := "v0.39.3"
 NODE_VERSION := "20.2"
 PYTHON_VERSION := "3.11.3"
-GO_VERSION := "1.20.5"
+GO_VERSION := "1.20.6"
 RUBY_VERSION := "3.2.2"
 
 update: brew-install-bundle copy-dotfiles install-tools
