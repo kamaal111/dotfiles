@@ -1,4 +1,6 @@
-tap "homebrew/cask"
+tap 'homebrew/cask'
+tap 'kamaalio/tap'
+tap 'kamaal111/tap'
 
 brew 'lazygit'
 brew 'just'
@@ -19,4 +21,5 @@ brew 'jq'
 brew 'openssl'
 brew 'rbenv'
 brew 'ruby-build'
-brew 'kamaalio/xctools/xctools'
+brew 'kamaalio/tap/xctools'
+brew 'kamaal111/tap/open_api_maker'
