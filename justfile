@@ -29,7 +29,7 @@ copy-dotfiles:
     done
 
 [private]
-install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust install-ruby
+install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust install-ruby install-bun
 
 [private]
 brew-install-bundle:
@@ -75,6 +75,12 @@ setup-tmux:
     fi
 
     echo "Done setting up TMUX"
+
+[private]
+install-bun:
+    #!/bin/zsh
+
+    curl -fsSL https://bun.sh/install | bash
 
 [private]
 install-ruby:
