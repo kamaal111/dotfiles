@@ -123,6 +123,8 @@ install-go:
 install-python:
     #!/bin/zsh
 
+    curl -sSf https://rye-up.com/get | RYE_INSTALL_OPTION="--yes" bash
+
     echo "N" | pyenv install $PYTHON_VERSION || true
     pyenv global $PYTHON_VERSION
 
