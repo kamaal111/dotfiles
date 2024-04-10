@@ -5,6 +5,7 @@ NODE_VERSION := "20.2"
 PYTHON_VERSION := "3.12.1"
 GO_VERSION := "1.20.6"
 RUBY_VERSION := "3.2.2"
+GITHUB_USERNAME := "kamaal111"
 
 update: brew-install-bundle copy-dotfiles install-tools
 
@@ -29,7 +30,7 @@ copy-dotfiles:
     done
 
 [private]
-install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust install-ruby install-bun
+install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust install-ruby install-bun setup-vim
 
 [private]
 brew-install-bundle:
@@ -64,6 +65,14 @@ setup-zsh:
     fi
 
     echo "Done setting up ZSH"
+
+[private]
+setup-vim:
+    #!/bin/zsh
+
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    git clone https://github.com/$GITHUB_USERNAME/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim-kickstart || true
 
 [private]
 setup-tmux:

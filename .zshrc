@@ -33,3 +33,6 @@ eval "$(pyenv init -)"
 [ -s ~/.bun/_bun ] && . ~/.bun/_bun
 
 . "$HOME/.rye/env"
+
+alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
+
