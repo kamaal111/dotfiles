@@ -1,0 +1,17 @@
+{
+  "name": "dotfiles",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "setup-vim": "bun scripts/setup-vim.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@kamaalio/kamaal": "^0.2.0"
+  }
+}
