@@ -25,6 +25,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -35,4 +36,3 @@ eval "$(pyenv init -)"
 . "$HOME/.rye/env"
 
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
-

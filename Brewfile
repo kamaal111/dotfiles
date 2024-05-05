@@ -23,6 +23,7 @@ brew 'helm'
 brew 'minikube'
 brew 'ripgrep'
 brew 'cheat'
+brew 'atuin'
 
 # To install yazi and all the tools it needs
 brew 'yazi'
