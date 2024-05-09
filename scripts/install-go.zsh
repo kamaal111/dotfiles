@@ -1,4 +1,4 @@
-GO_VERSION="1.22.2"
+GO_VERSION="1.22.3"
 
 . ~/.zshrc
 
