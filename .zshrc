@@ -26,6 +26,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
+eval "$(starship init zsh)"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
