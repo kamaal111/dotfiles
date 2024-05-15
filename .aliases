@@ -1,2 +1,3 @@
 alias lg="lazygit"
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+alias exa="eza"
