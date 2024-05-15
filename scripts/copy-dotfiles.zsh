@@ -11,5 +11,5 @@ FILES=(
 
 for file in $FILES
 do
-    cp -f $file ~/$file
+    cp -f dotfiles/$file ~/$file
 done
