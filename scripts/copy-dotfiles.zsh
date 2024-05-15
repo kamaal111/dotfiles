@@ -19,8 +19,8 @@ root=$(pwd)
 cd dotfiles/.config
 for config in *
 do
-    rm -rf ~/.config/$config/
-    cp -rf $config ~/.config/$config/
+    rm -rf ~/.config/$config
+    cp -rf $config ~/.config/$config
     echo "copied ~/.config/$config"
 done
 cd $root
