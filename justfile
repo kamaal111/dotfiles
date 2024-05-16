@@ -5,7 +5,6 @@ default:
 # Update dotfiles
 update: brew-install-bundle copy-dotfiles install-tools
 
-[private]
 copy-dotfiles:
     zsh scripts/copy-dotfiles.zsh
 
