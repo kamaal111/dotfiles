@@ -15,6 +15,7 @@ do
 done
 
 mkdir -p ~/.config
+mkdir -p ~/.config/zellij
 root=$(pwd)
 cd dotfiles/.config
 for config in *
