@@ -1,6 +1,13 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/dracula.toml"]
+import = ["~/.config/alacritty/themes/dracula.toml"]
+
+[shell]
+program = "/opt/homebrew/bin/fish"
+
+[window]
+opacity = 0.85
+blur = true
 
 [font]
 size = 12
@@ -20,3 +27,9 @@ style = "Italic"
 [font.normal]
 family = "JetBrains Mono"
 style = "Regular"
+
+[selection]
+save_to_clipboard = false
+
+[cursor]
+style.shape = "Block"
