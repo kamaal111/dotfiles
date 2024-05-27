@@ -14,11 +14,8 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 . ~/.aliases
 . ~/.functions
 . ~/.gvm/scripts/gvm || true
-
-if which rbenv > /dev/null
-then
-	eval "$(rbenv init -)"
-fi
+[ -s ~/.bun/_bun ] && . ~/.bun/_bun
+. "$HOME/.rye/env" || true
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -29,13 +26,24 @@ eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
+if which rbenv > /dev/null
+then
+	eval "$(rbenv init -)"
+fi
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-[ -s ~/.bun/_bun ] && . ~/.bun/_bun
-
-. "$HOME/.rye/env"
-
-alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
