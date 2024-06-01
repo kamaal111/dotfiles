@@ -7,6 +7,7 @@ ROOT_FILES=(
     .tmux.conf
     .gitconfig
     .gemrc
+    .zprofile
 )
 
 for file in $ROOT_FILES
