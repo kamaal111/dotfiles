@@ -9,3 +9,6 @@ nvm install $NODE_VERSION || exit 1
 nvm use $NODE_VERSION || exit 1
 
 echo "Done installing Node.js"
+
+echo Y | npm install -g pnpm
+echo "Installed PNPM"
