@@ -14,6 +14,7 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 . ~/.aliases
 . ~/.functions
 . ~/.gvm/scripts/gvm || true
+. <(fzf --zsh)
 [ -s ~/.bun/_bun ] && . ~/.bun/_bun
 . "$HOME/.rye/env" || true
 
