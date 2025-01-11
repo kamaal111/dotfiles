@@ -24,7 +24,6 @@ brew 'minikube'
 brew 'ripgrep'
 brew 'cheat'
 brew 'atuin'
-brew 'fish'
 
 # To install yazi and all the tools it needs
 brew 'yazi'
