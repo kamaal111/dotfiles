@@ -25,6 +25,7 @@ brew 'ripgrep'
 brew 'cheat'
 brew 'atuin'
 brew 'television'
+brew 'hurl'
 
 # To install yazi and all the tools it needs
 brew 'yazi'
