@@ -28,6 +28,10 @@ setup-tmux:
     zsh scripts/setup-tmux.zsh
 
 [private]
+install-java:
+    zsh scripts/install-java.zsh
+
+[private]
 install-bun:
     zsh scripts/install-bun.zsh
 

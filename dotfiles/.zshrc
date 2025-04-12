@@ -17,6 +17,7 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 . <(fzf --zsh)
 [ -s ~/.bun/_bun ] && . ~/.bun/_bun
 . "$HOME/.rye/env" || true
+. ~/.sdkman/bin/sdkman-init.sh || true
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
