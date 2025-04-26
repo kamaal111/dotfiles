@@ -1,5 +1,5 @@
-NODE_VERSION="20.2"
-NVM_VERSION="v0.39.3"
+NODE_VERSION="22"
+NVM_VERSION="v0.40.3"
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
 
@@ -7,8 +7,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | 
 
 nvm install $NODE_VERSION || exit 1
 nvm use $NODE_VERSION || exit 1
+nvm alias default $NODE_VERSION || exit 1
 
 echo "Done installing Node.js"
 
-echo Y | npm install -g pnpm
-echo "Installed PNPM"
+echo corepack enable
+echo "Enabled corepack"
