@@ -1,4 +1,4 @@
-RUBY_VERSION="3.2.2"
+RUBY_VERSION="3.4.5"
 
 echo "N" | rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION

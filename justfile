@@ -9,7 +9,7 @@ copy-dotfiles:
     zsh scripts/copy-dotfiles.zsh
 
 [private]
-install-tools: setup-zsh setup-tmux install-go install-node install-python install-rust install-ruby install-bun setup-vim
+install-tools: setup-zsh setup-tmux install-go install-node install-rust install-ruby install-bun setup-vim
 
 [private]
 brew-install-bundle:
@@ -46,10 +46,6 @@ install-rust:
 [private]
 install-go:
     zsh scripts/install-go.zsh
-
-[private]
-install-python:
-    zsh scripts/install-python.zsh
 
 [private]
 install-node:

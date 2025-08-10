@@ -1,5 +1,4 @@
 alias lg="lazygit"
-alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 alias exa="eza"
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias pn=pnpm

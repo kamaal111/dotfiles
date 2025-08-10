@@ -1,4 +1,4 @@
-NODE_VERSION="22"
+NODE_VERSION="24"
 NVM_VERSION="v0.40.3"
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
