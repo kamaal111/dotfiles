@@ -44,3 +44,6 @@ case ":$PATH:" in
     *":$PNPM_HOME:"*) ;;
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# Added by git-ai installer on Sat Jan 31 23:17:08 CET 2026
+export PATH="/Users/kamaal/.git-ai/bin:$PATH"
