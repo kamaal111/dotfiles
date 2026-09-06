@@ -1,0 +1,18 @@
+dotfiles/.zshrc
+  h_66e824d23aae73 77-85
+scripts/install-java.zsh
+  h_66e824d23aae73 1
+scripts/install-node.zsh
+  h_66e824d23aae73 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "59b610b3168cd4313fcd4a9bc5e9f8e6fe4e30e9",
+  "prompts": {},
+  "humans": {
+    "h_66e824d23aae73": {
+      "author": "Kamaal Farah <kamaal.f1@gmail.com>"
+    }
+  }
+}
