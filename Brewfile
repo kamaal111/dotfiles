@@ -10,6 +10,7 @@ brew 'tig'
 brew 'atuin'
 brew 'mise'
 brew 'btop'
+brew 'herdr'
 
 brew 'neovim'
 brew 'starship'
