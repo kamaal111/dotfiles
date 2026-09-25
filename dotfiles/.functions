@@ -1,32 +1,26 @@
 update-dotfiles()
 {
-    current_directory=$(pwd)
-    pull_failed=false
+    local current_directory="$PWD"
+    local dotfiles_directory="${DOTFILES:-$HOME/.dotfiles}"
 
-    . ~/.zshenv
-    cd $DOTFILES
+    cd "$dotfiles_directory" || return 1
 
-    git checkout main
-    git pull || pull_failed=true
-    if [ $pull_failed = true ]
-    then
-        cd $current_directory
-        echo "Failed to pull the latest dotfiles changes"
-        exit 1
+    if ! git pull --ff-only; then
+        cd "$current_directory"
+        echo "Failed to pull the latest dotfiles changes" >&2
+        return 1
     fi
 
-    update_failed=false
-    if test ! $(which just)
-    then
-        zsh setup.zsh || update_failed=true
+    if command -v just > /dev/null; then
+        just update
     else
-        just update || update_failed=true
+        zsh setup.zsh
     fi
+    local update_status=$?
 
-    if [ $update_failed = true ]
-    then
-        echo "Failed to update dotfiles"
+    cd "$current_directory" || return 1
+    if (( update_status != 0 )); then
+        echo "Failed to update dotfiles" >&2
     fi
-
-    cd $current_directory
+    return "$update_status"
 }

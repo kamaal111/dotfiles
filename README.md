@@ -27,3 +27,10 @@ From anywhere run the following
 ```sh
 update-dotfiles
 ```
+
+## Language versions
+
+Node.js and Rust are managed by mise. Edit
+`dotfiles/.config/mise/config.toml` to change the global defaults, then run
+`mise install` after the config has been copied to `~/.config/mise/config.toml`.
+New Zsh sessions activate mise automatically.

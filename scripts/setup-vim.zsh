@@ -1,5 +1,4 @@
-. ~/.zshrc
-bun i
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-bun install-nvim-kickstart
+set -e
+
+cd "${0:A:h:h}"
+mise exec -- node scripts/install-nvim-kickstart.mjs
