@@ -1,0 +1,15 @@
+Brewfile
+  h_66e824d23aae73 19
+  h_66e824d23aae73 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fedd4027714431d0a003dbde5008d6cf25c8392c",
+  "prompts": {},
+  "humans": {
+    "h_66e824d23aae73": {
+      "author": "Kamaal Farah <kamaal.f1@gmail.com>"
+    }
+  }
+}
