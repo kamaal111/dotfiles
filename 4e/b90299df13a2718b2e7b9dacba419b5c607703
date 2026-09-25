@@ -1,0 +1,16 @@
+dotfiles/.config/herdr/config.toml
+  h_66e824d23aae73 1-14
+dotfiles/.config/zed/settings.json
+  h_66e824d23aae73 1-117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4eb90299df13a2718b2e7b9dacba419b5c607703",
+  "prompts": {},
+  "humans": {
+    "h_66e824d23aae73": {
+      "author": "Kamaal Farah <kamaal.f1@gmail.com>"
+    }
+  }
+}
