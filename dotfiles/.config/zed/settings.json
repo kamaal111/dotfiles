@@ -1,0 +1,117 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "diff_view_style": "unified",
+  "agent_ui_font_size": 13.0,
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "autosave": "off",
+  "cursor_shape": "block",
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "fast": false,
+        "effort": "medium",
+        "model": "sonnet",
+        "mode": "auto"
+      },
+      "type": "registry",
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "collaboration_mode": "plan",
+        "reasoning_effort": "medium",
+        "fast-mode": false,
+        "mode": "agent",
+        "model": "gpt-6-sol",
+      },
+      "type": "registry",
+    },
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "title_bar": {
+    "show_sign_in": false,
+  },
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "ui_font_family": "JetBrains Mono",
+  "terminal": {
+    "env": {
+      "FIG_NEW_SESSION": "\"1\"",
+    },
+  },
+  "base_keymap": "VSCode",
+  "buffer_font_family": "JetBrains Mono",
+  "wrap_guides": [120],
+  "icon_theme": "Catppuccin Latte",
+  "colorize_brackets": true,
+  "inlay_hints": {
+    "show_background": false,
+  },
+  "minimap": {
+    "show": "always",
+  },
+  "agent": {
+    "dock": "right",
+    "profiles": {
+      "check": {
+        "name": "Check",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      },
+    },
+    "default_model": {
+      "enable_thinking": true,
+      "effort": "high",
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.6",
+    },
+    "model_parameters": [],
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Dracula Solid",
+  },
+  "ui_font_size": 13.0,
+  "buffer_font_size": 11.0,
+}

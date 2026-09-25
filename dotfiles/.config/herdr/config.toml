@@ -1,0 +1,14 @@
+onboarding = false
+
+[ui.sound.agents]
+droid = "on"
+
+[ui.toast]
+delivery = "terminal"
+
+[theme]
+name = "dracula"
+auto_switch = false
+
+[ui]
+status_indicators = "symbols"
