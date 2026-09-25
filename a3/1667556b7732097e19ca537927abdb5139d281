@@ -1,0 +1,14 @@
+dotfiles/.config/mise/config.toml
+  h_66e824d23aae73 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a31667556b7732097e19ca537927abdb5139d281",
+  "prompts": {},
+  "humans": {
+    "h_66e824d23aae73": {
+      "author": "Kamaal Farah <kamaal.f1@gmail.com>"
+    }
+  }
+}
