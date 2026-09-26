@@ -47,3 +47,5 @@ esac
 
 # Added by git-ai installer on Sat Jan 31 23:17:08 CET 2026
 export PATH="/Users/kamaal/.git-ai/bin:$PATH"
+
+export PATH="$HOME/.docker/bin:$PATH"
