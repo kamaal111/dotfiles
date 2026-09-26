@@ -49,3 +49,5 @@ esac
 export PATH="/Users/kamaal/.git-ai/bin:$PATH"
 
 export PATH="$HOME/.docker/bin:$PATH"
+
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
