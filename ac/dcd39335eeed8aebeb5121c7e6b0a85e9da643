@@ -1,0 +1,14 @@
+dotfiles/.wezterm.lua
+  h_66e824d23aae73 6-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "acdcd39335eeed8aebeb5121c7e6b0a85e9da643",
+  "prompts": {},
+  "humans": {
+    "h_66e824d23aae73": {
+      "author": "Kamaal Farah <kamaal.f1@gmail.com>"
+    }
+  }
+}
