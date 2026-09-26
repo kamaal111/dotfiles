@@ -10,6 +10,7 @@ ROOT_FILES=(
     .zshrc
     .gitconfig
     .zprofile
+    .wezterm.lua
 )
 
 for file in $ROOT_FILES
