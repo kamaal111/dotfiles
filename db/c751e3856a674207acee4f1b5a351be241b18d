@@ -1,0 +1,14 @@
+dotfiles/.aliases
+  h_66e824d23aae73 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dbc751e3856a674207acee4f1b5a351be241b18d",
+  "prompts": {},
+  "humans": {
+    "h_66e824d23aae73": {
+      "author": "Kamaal Farah <kamaal.f1@gmail.com>"
+    }
+  }
+}
