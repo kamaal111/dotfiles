@@ -2,3 +2,4 @@ alias exa="eza"
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias pn=pnpm
 alias pnx=pnpm exec
+alias neofetch=fastfetch

@@ -11,7 +11,7 @@ brew 'atuin'
 brew 'mise'
 brew 'btop'
 brew 'herdr'
-
+brew 'fastfetch'
 brew 'neovim'
 brew 'starship'
 
