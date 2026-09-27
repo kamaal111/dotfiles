@@ -28,6 +28,12 @@ From anywhere run the following
 update-dotfiles
 ```
 
+For a scheduled update, run `zsh ~/.dotfiles/scripts/update-dotfiles-unattended.zsh`.
+It sources the function directly, closes its input, disables Git, SSH, Homebrew,
+and mise prompts, and stops the update after two hours. Authentication or a
+privileged cask install that needs input will fail and should be checked in the
+scheduler's logs. Use your scheduler's normal way of capturing stdout and stderr.
+
 ## Language versions
 
 Node.js and Rust are managed by mise. Edit
