@@ -7,3 +7,5 @@ alias neofetch=fastfetch
 alias codex='codex --approve-for-me'
 alias bat="bat --theme=Dracula"
 alias cat="bat --paging=never --style=plain"
+alias find-slow="find"
+alias find="fd"
