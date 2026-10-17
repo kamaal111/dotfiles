@@ -1,11 +1,11 @@
-alias exa="eza"
-alias ls="eza"
+alias exa="exa --icons"
+alias ls="exa --icons"
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 alias pn=pnpm
 alias pnx=pnpm exec
 alias neofetch=fastfetch
 alias codex='codex --approve-for-me'
 alias bat="bat --theme=Dracula"
-alias cat="bat --paging=never --style=plain"
+alias cat="bat --theme=Dracula --paging=never --style=plain"
 alias find-slow="find"
 alias find="fd"
