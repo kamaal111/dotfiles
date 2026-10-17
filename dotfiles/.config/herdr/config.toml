@@ -16,7 +16,7 @@ status_indicators = "symbols"
 [[keys.command]]
 key = "cmd+p"
 type = "plugin_action"
-command = "herdr-picker.open"
+command = "herdrpp.open"
 description = "Search workspaces and tabs"
 
 [ui.sidebar.spaces]
