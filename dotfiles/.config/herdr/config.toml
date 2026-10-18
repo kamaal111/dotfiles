@@ -30,3 +30,9 @@ rows = [
   ],
   ["branch", "git_status"],
 ]
+
+[[keys.command]]
+key = "cmd+shift+r"
+type = "plugin_action"
+command = "herdrpp.tasks"
+description = "Run workspace tasks"
