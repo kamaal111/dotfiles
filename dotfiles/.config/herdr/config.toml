@@ -32,6 +32,12 @@ rows = [
 ]
 
 [[keys.command]]
+key = "cmd+shift+k"
+type = "plugin_action"
+command = "herdrpp.commands"
+description = "Open command palette"
+
+[[keys.command]]
 key = "cmd+shift+r"
 type = "plugin_action"
 command = "herdrpp.tasks"
