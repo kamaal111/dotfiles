@@ -27,6 +27,9 @@ rows = [
     { token = "$pr_draft", fg = "#8b949e" },
     { token = "$pr_merged", fg = "#a371f7" },
     { token = "$pr_closed", fg = "#f85149" },
+    { token = "$ci_passed", fg = "#238636" },
+    { token = "$ci_failed", fg = "#f85149" },
+    { token = "$ci_pending", fg = "#d29922" },
   ],
   ["branch", "git_status"],
 ]
