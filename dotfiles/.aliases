@@ -1,4 +1,4 @@
-alias ezapp="eza --icons"
+alias ezapp="eza --icons=always"
 alias exa="ezapp"
 alias ls="ezapp"
 alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
