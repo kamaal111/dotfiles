@@ -11,6 +11,7 @@ ROOT_FILES=(
     .gitconfig
     .zprofile
     .wezterm.lua
+    .hammerspoon
 )
 
 for file in $ROOT_FILES
