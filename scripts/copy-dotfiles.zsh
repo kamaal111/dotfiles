@@ -11,13 +11,16 @@ ROOT_FILES=(
     .gitconfig
     .zprofile
     .wezterm.lua
-    .hammerspoon
 )
 
 for file in $ROOT_FILES
 do
     cp -f "$repo_root/dotfiles/$file" "$HOME/$file"
 done
+
+mkdir -p "$HOME/.hammerspoon"
+cp -f "$repo_root/dotfiles/.hammerspoon/init.lua" "$HOME/.hammerspoon/init.lua"
+echo "copied ~/.hammerspoon/init.lua"
 
 mkdir -p "$HOME/.config"
 for source in "$repo_root"/dotfiles/.config/*
