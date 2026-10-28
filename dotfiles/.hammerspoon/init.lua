@@ -1,4 +1,3 @@
---[[
 hs.hotkey.bind({"cmd"}, "`", function()
   local app = hs.application.get("Rex")
 
@@ -10,4 +9,3 @@ hs.hotkey.bind({"cmd"}, "`", function()
     app:activate()
   end
 end)
-]]
