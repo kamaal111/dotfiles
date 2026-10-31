@@ -51,3 +51,9 @@ export PATH="/Users/kamaal/.git-ai/bin:$PATH"
 export PATH="$HOME/.docker/bin:$PATH"
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# >>> namu shell integration >>>
+if command -v namu >/dev/null 2>&1; then
+  eval "$(namu shell-init zsh)"
+fi
+# <<< namu shell integration <<<
